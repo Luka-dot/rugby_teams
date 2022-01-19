@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rugby_teams/screens/auth/login.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,24 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
       title: 'Rugby Teams',
       theme: ThemeData(
         scaffoldBackgroundColor: const Color(0xFFEDE7DC),
         primarySwatch: Colors.blue,
       ),
-      home: const Scaffold(
-        body: Center(
-          child: Text(
-            'Rugby Teams',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                color: Color(0xFF00325A),
-                fontWeight: FontWeight.bold,
-                fontSize: 40),
-          ),
-        ),
-      ),
+      home: Login(),
     );
   }
 }
