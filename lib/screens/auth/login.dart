@@ -27,7 +27,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
   @override
   void initState() {
     _animationController =
-        AnimationController(vsync: this, duration: Duration(seconds: 20));
+        AnimationController(vsync: this, duration: Duration(seconds: 22));
     _animation =
         CurvedAnimation(parent: _animationController, curve: Curves.linear)
           ..addListener(() {
@@ -208,7 +208,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                 ),
               ),
               SizedBox(
-                height: 40,
+                height: 44,
               ),
               MaterialButton(
                 onPressed: _submitFormOnLogin,
