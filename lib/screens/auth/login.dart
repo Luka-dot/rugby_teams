@@ -129,7 +129,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                         }
                       },
                       style: TextStyle(color: Colors.white),
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         hintText: 'Email',
                         hintStyle: TextStyle(color: Colors.white),
                         enabledBorder: UnderlineInputBorder(
@@ -143,7 +143,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     //Password
