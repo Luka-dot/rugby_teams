@@ -27,7 +27,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
   @override
   void initState() {
     _animationController =
-        AnimationController(vsync: this, duration: Duration(seconds: 22));
+        AnimationController(vsync: this, duration: Duration(seconds: 42));
     _animation =
         CurvedAnimation(parent: _animationController, curve: Curves.linear)
           ..addListener(() {
@@ -57,7 +57,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
       children: [
         CachedNetworkImage(
           imageUrl:
-              "https://media.istockphoto.com/photos/businesswoman-using-computer-in-dark-office-picture-id557608443?k=6&m=557608443&s=612x612&w=0&h=fWWESl6nk7T6ufo4sRjRBSeSiaiVYAzVrY-CLlfMptM=",
+              "https://cdn.pixabay.com/photo/2016/03/14/11/09/field-1255320_960_720.jpg",
           placeholder: (context, url) => Image.asset(
             'assets/images/wallpaper.jpg',
             fit: BoxFit.fill,
@@ -80,7 +80,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
               Text(
                 'Login',
                 style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontWeight: FontWeight.bold,
                     fontSize: 30),
               ),
@@ -93,7 +93,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                     TextSpan(
                       text: 'Don\'t have an account',
                       style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                           fontWeight: FontWeight.bold,
                           fontSize: 16),
                     ),
@@ -104,7 +104,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                       text: 'Register',
                       style: TextStyle(
                           decoration: TextDecoration.underline,
-                          color: Colors.blue.shade300,
+                          color: Colors.orange,
                           fontWeight: FontWeight.bold,
                           fontSize: 16),
                     ),
@@ -128,15 +128,15 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                           return null;
                         }
                       },
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.black),
                       decoration: const InputDecoration(
                         hintText: 'Email',
-                        hintStyle: TextStyle(color: Colors.white),
+                        hintStyle: TextStyle(color: Colors.black),
                         enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                         focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                         errorBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.red),
@@ -159,7 +159,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                           return null;
                         }
                       },
-                      style: TextStyle(color: Colors.white),
+                      style: TextStyle(color: Colors.black),
                       decoration: InputDecoration(
                         suffixIcon: GestureDetector(
                           onTap: () {
@@ -171,16 +171,16 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                             _obscureText
                                 ? Icons.visibility
                                 : Icons.visibility_off,
-                            color: Colors.white,
+                            color: Colors.black,
                           ),
                         ),
                         hintText: 'Password',
-                        hintStyle: TextStyle(color: Colors.white),
+                        hintStyle: TextStyle(color: Colors.black),
                         enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                         focusedBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                         errorBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.red),
@@ -190,7 +190,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Align(
@@ -200,19 +200,19 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                   child: Text(
                     'Forget password?',
                     style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 17,
+                        color: Colors.blueGrey,
+                        fontSize: 18,
                         decoration: TextDecoration.underline,
                         fontStyle: FontStyle.italic),
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 44,
               ),
               MaterialButton(
                 onPressed: _submitFormOnLogin,
-                color: Colors.pink.shade700,
+                color: Colors.deepOrange,
                 elevation: 8,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(13)),
@@ -220,7 +220,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                   padding: const EdgeInsets.symmetric(vertical: 14),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                    children: const [
                       Text(
                         'Login',
                         style: TextStyle(
